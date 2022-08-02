@@ -17,6 +17,16 @@ class List_node:
         # Delete the node after this one. Assume node is not a tail.  a -> b -> c to a -> c
         node.next = node.next.next #Assign node's next node to be original next node's next node.
 
+    def delete_node(self, value):
+        prev = None
+        current = self
+        while current:
+            if current.data == value:
+                prev.next = current.next
+                break
+            prev = current
+            current = current.next
+
 def print_linked_list(list):
     list_array = []
     while list:
@@ -25,13 +35,14 @@ def print_linked_list(list):
     print(list_array)
     return None
 
-def generate_linked_list(list):
-    head = tail = List_node()
+def generate_linked_list(array):
+    head = tail = List_node(array[0])
 
-    for value in list:
-        tail.next = (List_node(value))
+    for i in range(1, len(array)):
+        tail.next = (List_node(array[i]))
         tail = tail.next
-        
+
     return head
-        
+
+
     
