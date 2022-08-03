@@ -1,7 +1,3 @@
-from linked_list_template import List_node
-from linked_list_template import print_linked_list
-from linked_list_template import generate_linked_list
-
 def reverse_sublist(list, start, finish):
     dummy_node = sublist_head = List_node(0, list)
 
@@ -48,9 +44,3 @@ def reverse_sublist2(list, start, finish):
     left_prev.next = prev
 
     return dummy_node.next
-
-arr = [11, 3, 5, 7, 2]
-
-x = generate_linked_list(arr)
-
-print_linked_list(reverse_sublist2(x,1,5))
