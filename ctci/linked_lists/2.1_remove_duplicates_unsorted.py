@@ -35,7 +35,24 @@ def remove_duplicates2(list):
   prev.next = current
   return dummy.next
 
+def remove_duplicates3(list):
+  current = list
+  
+  while current and current.next:
+    distinct = current
+    while distinct and distinct.next:
+      if distinct.next.data == current.data:
+        distinct.next = distinct.next.next
+
+      else:
+        distinct = distinct.next
+
+    current = current.next
+
+  return list
+
+
 x = generate_linked_list([1,4,3,3,3,3,2,4])
-print_linked_list(remove_duplicates2(x))
+print_linked_list(remove_duplicates3(x))
 
 
