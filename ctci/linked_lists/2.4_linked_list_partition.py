@@ -3,7 +3,8 @@ from template import print_linked_list
 from template import generate_linked_list
 
 def partition(part, list):
-    '''O(n) with 2 passes. O(n) space'''
+    '''O(n) with 2 passes. O(1) space becase not new nodes or data structures are used. We are creating
+    new pointers which uses constant space'''
     new_list = head = List_node()
     current = list
     while current: #First iteration
@@ -22,7 +23,8 @@ def partition(part, list):
     return new_list.next
   
 def partition2(x, list):
-    '''O(n) time with 1 pass. O(n) space'''
+    '''O(n) time with 1 pass. O(1) space becase not new nodes or data structures are used. We are creating
+    new pointers which uses constant space'''
     head = less_list = List_node()
     head2 = greater_list = List_node()
 
@@ -40,5 +42,8 @@ def partition2(x, list):
 
     return head.next
 
+def partition(x, list):
+    pass
+    
 x = generate_linked_list([3,5,8,5,10,2,1])
 print_linked_list(partition2(5,x))
