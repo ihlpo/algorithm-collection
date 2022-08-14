@@ -90,8 +90,6 @@ def sum_lists_recursive(x,y):
             if result > 9:
                 result = result - 10
                 head.next = List_node(result)
-                print(recurse(list1.next, list2.next, head.next, 1))
-
             else:
                 head.next = List_node(result)
                 recurse(list1.next, list2.next, head.next, 0)
@@ -118,15 +116,12 @@ def sum_lists_recursive(x,y):
             fill_list(x, count_nodes(y) - count_nodes(x))
         else:
             fill_list(y, count_nodes(x) - count_nodes(y))
-        print(recurse(x,y,result_list,0))
-    print_linked_list(x)
-    print_linked_list(y)
+            print(recurse(x,y,result_list, 1))
     return result_list.next
 
-        
 
-x = generate_linked_list([1])
-y = generate_linked_list([9,9,9,9])
+x = generate_linked_list([1,3,4,5])
+y = generate_linked_list([1,2,3,3])
 
 print_linked_list(sum_lists_recursive(x,y))
         
