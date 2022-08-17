@@ -39,13 +39,3 @@ def intersection(list1, list2):
             head2 = head2.next
                 
     return False
-
-
-
-x = List_node(1,List_node(2,List_node(3,List_node(4))))
-y = List_node(9, List_node(8, x.next))
-
-
-print_linked_list(x)
-print_linked_list(y)
-print(intersection(x, y))
