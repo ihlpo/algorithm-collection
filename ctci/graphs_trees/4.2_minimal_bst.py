@@ -25,8 +25,7 @@ def inorder(node):
     
     inorder(node.left)
     print(node.value)
-    inorder(node.right)
-    
+    inorder(node.right) 
 
-x = create_minimal_bst([1,2,4,6,10])
+x = create_minimal_bst2([1,2,4,6,10])
 inorder(x)
