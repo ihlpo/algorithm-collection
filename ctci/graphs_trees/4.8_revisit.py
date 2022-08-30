@@ -58,3 +58,4 @@ def common_ancestor(node1, node2):
             return node1.value
         node1 = node1.parent
         node2 = node2.parent
+
